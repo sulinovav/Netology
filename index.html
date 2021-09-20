@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="">
     <title>Флористика с душой - цветы, букеты, композиции, оформление мероприятий</title>
 
     <link rel="stylesheet" href="./assets/css/style.css" />
@@ -18,62 +19,63 @@
             alt="Флористика с душой - букеты на любые мероприятия"
           />
         </div>
-        <div>
+        <div id="menu-button">
           <img src="/assets/image/burger.svg" alt="" />
           Меню
         </div>
       </div>
 
       <!-- Popup menu-->
-      <div style="display: none;" class="header__popup" id="header-popup">
+      <div style="display: none;" class="header__popup" id="popup-menu">
         <div class="header__popup_content container">
           <div class="header__body">
             <div class="header__logo">
               <img src="./assets/image/logo.svg" alt="Логотип флористика с душой">
             </div>
-            <button href="/"><img src="assets/image/close.svg" alt="Закрыть окно"></button>
+            <button id="close-menu-button" href="/"><img src="assets/image/close.svg" alt="Закрыть окно"></button>
           </div>
   
           <nav class="header__menu">
             <ul class="header__list">
-              <li><a href="/" class="header__link">свадебная флористика</a></li>
-              <li><a href="/" class="header__link">оформление мероприятий</a></li>
-              <li><a href="/" class="header__link">композиции</a></li>
+              <li><a href="/" class="header__link">свадебная <br> флористика</a></li>
               <li><a href="/" class="header__link">букеты на любые мероприятия</a></li>
+              <li><a href="/" class="header__link">композиции</a></li>
+              <li><a href="/" class="header__link">оформление мероприятий</a></li> 
             </ul>
           </nav>
-        </div>
+        </div>  
       </div>
 
-    <div class="main_title">
-      <div class="intro container">
-        <h1 class=>Флористика с душой</h1>
-        <a href="#catalog" class="catalog-button-wrapper">
-          <div class="button-watch-1">
-            СМОТРЕТЬ РАБОТЫ
+      <div class="main_title">
+        <div class="intro container">
+          <h1 class=>Флористика с душой</h1>
+          <a href="#catalog" class="catalog-button-wrapper">
+            <div class="button-watch-1">
+              СМОТРЕТЬ РАБОТЫ
+            </div>
+          </a>
+          <div class="intro-grad">
+            <img src="./assets/image/gradient.png" alt="Смотреть каталог">
           </div>
-        </a>
-        <div class="intro-grad">
-          <img src="./assets/image/gradient.png" alt="Смотреть каталог">
+        </div>
+  
+        <div class="intro-nav">
+          <div class="social-media">
+           <img src="/assets/image/inst.svg" alt="">
+           <img src="/assets/image/fb.svg" alt="">
+           <img src="/assets/image/whatsap.svg" alt="">
+          <img src="/assets/image/vk.svg" alt="">
+          </div>
+          <div class="mouse">
+            <img src="./assets/image/mouse-1.svg" alt="Прокрутка вниз" class="mouse-1">
+            <img src="./assets/image/mouse-2.svg" alt="Прокрутка вниз" class="mouse-2">
+        </div>
+        <div class="watch-cat">
+          <img src="assets/image/navstrelka.svg" alt="Смотреть каталог">
+        </div>
         </div>
       </div>
 
-      <div class="intro-nav">
-        <div class="social-media">
-         <a class="inst" href=""></a>
-            <a class="fb" href=""></a>
-            <a class="wsap" href=""></a>
-            <a class="vk" href=""></a>
-        </div>
-        <div class="mouse">
-          <img src="./assets/image/mouse-1.svg" alt="Прокрутка вниз" class="mouse-1">
-          <img src="./assets/image/mouse-2.svg" alt="Прокрутка вниз" class="mouse-2">
-      </div>
-      <div class="watch-cat">
-        <img src="assets/image/navstrelka.svg" alt="Смотреть каталог">
-      </div>
-      </div>
-    </div>
     </header>
 
 
@@ -126,7 +128,7 @@
   <p class="text1">
     <p>При заказе свадебного оформления предоставляется</p><p>скидка на букет невесты и бутоньерку в размере 30%</p>
 </p>
-  <div class="button-order"><a href="/">Заказать оформление</a></div>
+  <div id="form-button" class="button-order">Заказать оформление</div>
 </div>      
   
   <div class="image"><img src="./assets/image/action-img.jpg" alt="Акция при заказе свадебного оформления"></div>
@@ -144,10 +146,10 @@
         <a href="/">Оформление мероприятий</a>
       </div>
       <nav class="social-media2">
-        <a class="inst" href="/"></a>
-        <a class="fb" href="/"></a>
-        <a class="wsap" href="/"></a>
-        <a class="vk" href="/"></a>
+        <img src="/assets/image/inst.svg" alt="">
+        <img src="/assets/image/fb.svg" alt="">
+        <img src="/assets/image/whatsap.svg" alt="">
+       <img src="/assets/image/vk.svg" alt="">
       </nav>
     </footer>
   
@@ -155,7 +157,7 @@
     <div style="display: none;" class="order_popup" id="form-popup">
       <div class="order_popup_content">
         <div class="order_desc">
-          <a href="/"><img src="./assets/image/close.svg" alt="Закрыть окно"></a>
+          <button id="close-form-button" href="/"><img src="assets/image/close.svg" alt="Закрыть окно"></button>
           <p> Оставьте свой номер и мы вам перезвоним!</p>
           <form class="order_form ">
             <input type="text" name="name" value="Имя" class="form_text">
@@ -165,5 +167,27 @@
         </div>
       </div>
     </div>
+
+<script>
+const buttonMenu = document.getElementById('menu-button');
+const popupMenu = document.getElementById('popup-menu');
+const buttonCloseMenu = document.getElementById('close-menu-button');
+
+buttonMenu.onclick = () => popupMenu.style = 'display: block';
+buttonCloseMenu.onclick = () => popupMenu.style = 'display: none';
+
+const buttonForm = document.getElementById('form-button');
+const popupForm = document.getElementById('form-popup');
+const buttonCloseForm = document.getElementById('close-form-button');
+
+buttonForm.onclick = () => {
+  popupForm.style = 'display: block';
+ 
+}
+buttonCloseForm.onclick = () => popupForm.style = 'display: none';
+
+
+</script>
+
   </body>
 </html>

@@ -93,6 +93,10 @@ body {
   width: 100%;
   min-height: 100%;
   background-color: #3b181e;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
 }
 
 .header__popup_content {
@@ -122,6 +126,8 @@ body {
   flex-flow: column nowrap;
   align-items: center;
   justify-content: center;
+  font-size: 45px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .header__list li {
@@ -189,10 +195,11 @@ body {
     flex-flow: row nowrap;
     justify-content: space-between;
     flex-direction: column;
-    height: 172px;
-    width: 35px;
+    height: 272px;
+    width: 135px;
     padding-left: 50px;
     align-self: center;
+  
   }
 
   .social-media2 {
@@ -442,7 +449,7 @@ footer {
 
 .foot-menu a {
   height: 16px;
-  font-size: 12px;
+  font-size: 16px;
 }
 
 .footer-social social-media {
@@ -458,11 +465,11 @@ footer {
   border: 1px solid yellow;
   width: 100%;
   min-height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.8); 
   position: fixed;
   top: 0;
-  overflow: hidden;
-  z-index: 40;
+  left: 0;
+  z-index: 2;
 }
 
 .order_popup_content {
@@ -470,8 +477,9 @@ footer {
   flex-flow: row nowrap;
   width: 716px;
   min-height: 444px;
-  top: 30%;
-  left: 20%;
+  position: fixed;
+  margin-left: 20%;
+  margin-top: 20%;
 }
 
 .order_desc {
