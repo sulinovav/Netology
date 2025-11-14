@@ -1,0 +1,33 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.triangle'
+version = '1.0.0'
+sourceCompatibility = '8'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.2'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+tasks.register('runExample', JavaExec) {
+    group = 'application'
+    description = 'Run the TriangleAreaExample'
+    classpath = sourceSets.main.runtimeClasspath
+    mainClass = 'com.triangle.TriangleAreaExample'
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'com.triangle.TriangleAreaExample'
+    }
+}
